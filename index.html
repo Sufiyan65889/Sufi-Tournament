@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>E Sports Sufi Tournament</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById("live-time").innerText = now.toLocaleString();
+        }
+        setInterval(updateTime, 1000);
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <nav class="bg-gradient-to-r from-purple-500 to-blue-500 text-white p-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">E Sports Sufi Tournament</a>
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                <li><a href="#tournament" class="hover:text-gray-300">Tournament</a></li>
+                <li><a href="#download" class="hover:text-gray-300">Download APK</a></li>
+                <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="relative fade-in" id="home">
+        <img src="https://storage.googleapis.com/a1aa/image/LnXX_xKmqXG2SCLIsw101fcXgd-PBGthqeQxFRE65_s.jpg" alt="A dynamic and action-packed scene from Free Fire game" class="w-full h-screen object-cover"/>
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+            <h1 class="text-4xl font-bold mb-4">Welcome to E Sports Sufi Tournament</h1>
+            <p class="text-lg mb-8">Join the ultimate Free Fire tournament and showcase your skills!</p>
+            <a href="#tournament" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Learn More</a>
+        </div>
+    </section>
+    <section class="py-16 bg-white" id="tournament">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Tournament Details</h2>
+            <p class="text-lg mb-8">Get ready for an action-packed tournament with exciting matches, amazing prizes, and unforgettable moments.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-2">Date & Time</h3>
+                    <p class="text-lg" id="live-time">Loading...</p>
+                </div>
+                <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-2">Location</h3>
+                    <p class="text-lg">India - Bengaluru</p>
+                </div>
+                <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-2">Prizes</h3>
+                    <p class="text-lg">
+                        🏆 1st Place: ₹50<br/>
+                        🥈 2nd Place: ₹40<br/>
+                        🥉 3rd Place: ₹30
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white fade-in" id="download">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Download Tournament App</h2>
+            <p class="text-lg mb-8">Stay updated with the latest news, match schedules, and results by downloading our tournament app.</p>
+            <a href="https://www.mediafire.com/file/kkdh9v67jljo7ky/Sufi+TOURNAMENT_1.2.apk/file" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Download APK</a>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>© 2025 E Sports Sufi Tournament. All rights reserved by Sufiyan.</p>
+        </div>
+    </footer>
+    <script>
+        updateTime();
+    </script>
+</body>
+</html>
